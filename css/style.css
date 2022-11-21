@@ -24,3 +24,225 @@
     lonely-planet: #0d2481
     cco: #ffd830
 */
+
+/* --- REGOLE GENERALI --- */
+.largeContainer {
+    background-color: tomato;
+    /* height: 25vh; */
+    max-width: 1180px;
+    margin: 0 auto;
+
+    /* temp */
+    /* width: 50vw; */
+}
+
+.bigBtn {
+    margin: 1rem 0;
+}
+
+/* --- HEADER --- */
+body > header {
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    
+    /*temp*/
+    background-color: aquamarine;
+    height: 8vh; 
+    padding: 0 1.5rem;
+}
+
+header nav {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav div ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    height: 100%;
+    list-style: none;
+}
+
+header nav div ul li a{
+    padding: 0.4rem;
+
+    /*temp*/
+    background-color: violet;
+}
+
+/* --- JUMBOTRON --- */
+#jumbotronSection {
+    width: 100%;
+    /* display: flex;
+    justify-content: center; */
+    margin-top: 100px;
+
+    /*temp*/
+    
+    height: 50vh;
+    
+    background-color: turquoise;
+}
+
+#jumbotronSection > .largeContainer {
+    height: 100%;
+    position: relative;
+    top: 10%;
+
+    margin: 0 auto;
+}
+
+#jumbotronSection > .largeContainer h1 {
+    margin: 2rem 0;
+}
+
+#jumbotronSection .largeContainer > div {
+    display: flex;
+    align-items: flex-start;
+
+    /*temp*/
+    /* background-color: violet; */
+    width: 100%;
+}
+
+#jumbotronSection .largeContainer > div > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 35%;
+
+    /*temp*/
+    background-color: yellow;
+}
+
+#jumbotronSection .largeContainer > div > div:last-child {
+    width: 65%;
+    /*temp*/
+    background-color: red;
+    /* width: 500px; */
+    /* height: 100%; */
+}
+
+/* --- MAIN --- */
+main {
+    background-color: wheat;
+}
+
+.smallContainer {
+    margin: 8rem auto;
+    max-width: 1000px;
+    /* height: 20vh; */
+    background-color: thistle;
+}
+
+main #plans {
+
+    /*temp*/
+    width: 100%;
+    background-color: yellow;
+}
+
+#plans #planSelector {
+    margin: 1rem 0;
+}
+
+#plans #planSelector label {
+    margin-right: 1.5rem;
+}
+
+#plans .colContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+
+#plans .colContainer .col {
+
+
+    display: flex;
+    flex-direction: column;
+
+    border: 3px dotted red;
+}
+
+.smallCol {
+    width: calc((100% / 3) - calc(2rem / 3));
+}
+
+#plans .largeCol .row {
+    width: 100%;
+    display: flex;
+    /* background-color: violet; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+#partner {
+    background-color: teal;
+    margin: 5rem 0;
+    display: flex;
+}
+
+#partner .imgContainer {
+    background-color: violet;
+    width: 60%;
+}
+
+#partner .textContainer {
+
+    width: 40%;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: yellow;
+}
+
+.card {
+    width: 30%;
+    /* height: 50px; */
+    background-color: tomato;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    background-color: yellow;
+    margin-bottom: 2rem
+}
+
+#dropboxBusinessSection .smallContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#faqSection .faqContainer {
+    border-bottom: 1px solid red;
+}
+
+#faqSection .faqContainer:first-of-type {
+    border-top: 1px solid red;
+}
+
+footer {
+    width: 100%;
+    background-color: wheat;
+}
+
+#linkListsContainer {
+    display: flex;
+    gap: 3rem;
+}
