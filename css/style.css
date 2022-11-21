@@ -6,7 +6,7 @@
 }
 
 /*COLOR PALETTE
-    header text, main text: #a3a3a3
+    header text, main text: #252525
     footer text: #ffffff
     main-blue: #0061ff
     full-width-sections-bg: #b4d0e7
@@ -30,18 +30,14 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 .largeContainer {
-    background-color: tomato;
-    /* height: 25vh; */
     max-width: 1180px;
     margin: 0 auto;
-
-    /* temp */
-    /* width: 50vw; */
 }
 
 .btn {
     border: 1px solid black;
     padding: 0.4em 1em;
+    text-decoration: none;
 }
 
 .blueBtn {
@@ -51,7 +47,14 @@ body {
 }
 
 .bigBtn {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
+    padding: 0.6em 0.9em;
+    font-size: 0.9rem;
+}
+
+.text {
+    font-size: 0.9rem;
+    color: #252525;;
 }
 
 /* --- HEADER --- */
@@ -94,41 +97,35 @@ header nav div ul li a{
     text-decoration: none;
     padding: 0.4rem;
     font-size: 0.9rem;
-    color: #000000;
+    color: #252525;
 }
 
 /* --- JUMBOTRON --- */
 #jumbotronSection {
     width: 100%;
-    /* display: flex;
-    justify-content: center; */
     margin-top: 8vh;
-
-    /*temp*/
     
-    height: 50vh;
-    
-    background-color: turquoise;
+    background-color: #b4d0e7;
 }
 
 #jumbotronSection > .largeContainer {
     height: 100%;
-    position: relative;
-    top: 10%;
 
-    margin: 0 auto;
+    position: relative;
+    top: 70px;
 }
 
 #jumbotronSection > .largeContainer h1 {
-    margin: 2rem 0;
+    margin: 2rem 0 3rem;
+    font-size: 4rem;
+    font-weight: 800;
 }
 
 #jumbotronSection .largeContainer > div {
     display: flex;
+    justify-content: space-between;
     align-items: flex-start;
 
-    /*temp*/
-    /* background-color: violet; */
     width: 100%;
 }
 
@@ -137,18 +134,21 @@ header nav div ul li a{
     flex-direction: column;
     align-items: flex-start;
 
-    width: 35%;
+    width: 31%;
+}
 
-    /*temp*/
-    background-color: yellow;
+#jumbotronSection i {
+    margin-top: 3.5rem;
+    font-size: 3rem;
+    color: #252525;
 }
 
 #jumbotronSection .largeContainer > div > div:last-child {
-    width: 65%;
-    /*temp*/
-    background-color: red;
-    /* width: 500px; */
-    /* height: 100%; */
+    width: 68%;
+}
+
+#jumbotronSection img {
+    width: 100%;
 }
 
 /* --- MAIN --- */
