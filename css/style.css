@@ -26,6 +26,9 @@
 */
 
 /* --- REGOLE GENERALI --- */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 .largeContainer {
     background-color: tomato;
     /* height: 25vh; */
@@ -36,6 +39,17 @@
     /* width: 50vw; */
 }
 
+.btn {
+    border: 1px solid black;
+    padding: 0.4em 1em;
+}
+
+.blueBtn {
+    color: #ffffff;
+    background-color: #0061ff;
+    border: none;
+}
+
 .bigBtn {
     margin: 1rem 0;
 }
@@ -43,16 +57,15 @@
 /* --- HEADER --- */
 body > header {
     width: 100vw;
-
+    height: 8vh; 
+  
     position: fixed;
     top: 0;
     left: 0;
     z-index: 30;
     
-    /*temp*/
-    background-color: aquamarine;
-    height: 8vh; 
-    padding: 0 1.5rem;
+    padding: 0 1.1rem;
+    background-color: #ffffff;
 }
 
 header nav {
@@ -65,17 +78,23 @@ header nav {
 header nav div ul {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 
     height: 100%;
     list-style: none;
 }
 
-header nav div ul li a{
-    padding: 0.4rem;
+header nav div ul li{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
 
-    /*temp*/
-    background-color: violet;
+header nav div ul li a{
+    text-decoration: none;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    color: #000000;
 }
 
 /* --- JUMBOTRON --- */
@@ -83,7 +102,7 @@ header nav div ul li a{
     width: 100%;
     /* display: flex;
     justify-content: center; */
-    margin-top: 100px;
+    margin-top: 8vh;
 
     /*temp*/
     
