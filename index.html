@@ -64,7 +64,7 @@
             <h1>Tutto ciò che ti serve per il lavoro, in un unico posto</h1>
             <div>
                 <div>
-                    <p class="text">
+                    <p class="bigText">
                         Finalmente tutti i tuoi strumenti, contenuti e 
                         collaboratori sono accessibili dallo stesso posto.
                         <br> 
@@ -73,7 +73,7 @@
                         ottimizzare il flusso di lavoro esistente.
                     </p>
                     <a class="btn blueBtn bigBtn" href="#">Inizia la tua prova gratuita</a>
-                    <span class="text">Annulla in qualsiasi momento</span>
+                    <span class="bigText">Annulla in qualsiasi momento</span>
                     <a href="#plans">
                         <i class="fa-sharp fa-solid fa-arrow-down"></i>
                     </a>
@@ -87,92 +87,166 @@
 
     <main>
         <div class="smallContainer">
-            <section id="plans">
-                <h2>lorem ipsum</h2>
+            
+            <section id="plansSection">
+                <h2>Trova il piano business che fa per te</h2>
                 <div id="planSelector">
                     <input type="radio" name="plan" id="monthlyPlan">
-                    <label for="monthlyPlan">Fatturazione mensile</label>
+                    <label class="smallText" for="monthlyPlan">Fatturazione mensile</label>
 
                     <input type="radio" name="plan" id="yearlyPlan">
-                    <label for="yearlyPlan">Fatturazione annuale</label>
+                    <label class="smallText" for="yearlyPlan">Fatturazione annuale</label>
                 </div>
                 <div class="colContainer">
-                    <div class="col smallCol">
-                        <header class="planType">icon + lorem</header>
-                        <div class="planFeaturesTop">
-                            <h3>plan name</h3>
-                            <span class="planPrice">lorem $</span>
-                            <ul>
-                                <li>lorem</li>
-                                <li>lorem</li>
-                                <li>lorem</li>
-                            </ul>
-                            <a class="btn blueBtn bigBtn" href="#">lorem</a>
-                            <div>
-                                lorem <a href="#"> lorem</a>
+
+                    <div class="col smallCol smallText">
+                        <header class="planType ">
+                            <i class="fa-solid fa-user"></i>
+                            Singolo
+                        </header>
+                        <div class="planContainer">
+                            <div class="planContainerTop">
+                                <h3>Professional</h3>
+                                <span class="planPrice">
+                                    12.00
+                                    <br>
+                                    <span>/mese</span>
+                                </span>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <span class="fa-li">
+                                            <i class="fa-solid fa-user"></i>
+                                        </span>
+                                        1 utente
+                                    </li>
+                                    <li>
+                                        <span class="fa-li">
+                                            <i class="fa-solid fa-folder"></i>
+                                        </span>
+                                        5 TB di spazio di archiviazione sicuro
+                                    </li>
+                                    <li>
+                                        <span class="fa-li">
+                                            <i class="fa-solid fa-circle-nodes"></i>
+                                        </span>
+                                        Funzioni di produttività premium e condivisione file semplice e sicura
+                                    </li>
+                                </ul>
+                                <a class="btn blueBtn bigBtn" href="#">lorem</a>
+                                <div>
+                                    lorem <a href="#"> lorem</a>
+                                </div>
                             </div>
-                        </div>
-                        <hr class="customHR">
-                        <div class="planFeaturesBottom">
-                            <h4>lorem ipsum</h4>
-                            <ul>
-                                <li>lorem</li>
-                                <li>lorem</li>
-                            </ul>
+                            <hr class="customHR">
+                            <div class="planContainerBottom">
+                                <h4>lorem ipsum</h4>
+                                <ul>
+                                    <li>lorem</li>
+                                    <li>lorem</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col smallCol">
-                        <header class="planType">icon + lorem</header>
-                        <div class="planFeaturesTop">
-                            <h3>plan name</h3>
-                            <span class="planPrice">lorem $</span>
-                            <ul>
-                                <li>lorem</li>
-                                <li>lorem</li>
-                                <li>lorem</li>
-                            </ul>
-                            <a class="btn blueBtn bigBtn" href="#">lorem</a>
-                            <div>
-                                lorem <a href="#"> lorem</a>
+                    <div class="col smallCol smallText">
+                        <header class="planType">
+                            <i class="fa-solid fa-users"></i>
+                            Team
+                        </header>
+                        <div class="planContainer"> 
+                            <div class="planContainerTop">
+                                <h3>Advanced</h3>
+                                <span class="planPrice">
+                                    18.00
+                                    <br>
+                                    <span>/utente/mese</span>
+                                </span>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <span class="fa-li">
+                                            <i class="fa-solid fa-user"></i>
+                                        </span>
+                                        3 o più utenti
+                                    </li>
+                                    <li>
+                                        <span class="fa-li">
+                                            <i class="fa-solid fa-folder"></i>
+                                        </span>
+                                        Tutto lo spazio di cui ha bisogno il tuo team
+                                    </li>
+                                    <li>
+                                        <span class="fa-li">
+                                            <i class="fa-solid fa-circle-nodes"></i>
+                                        </span>
+                                        Sofisticate funzioni di controllo e per tenere al sicuro tutti i file del tuo team
+                                    </li>
+                                </ul>
+                                <a class="btn blueBtn bigBtn" href="#">lorem</a>
+                                <div>
+                                    lorem <a href="#"> lorem</a>
+                                </div>
                             </div>
-                        </div>
-                        <hr class="customHR">
-                        <div class="planFeaturesBottom">
-                            <h4>lorem ipsum</h4>
-                            <ul>
-                                <li>lorem</li>
-                                <li>lorem</li>
-                            </ul>
+                            <hr class="customHR">
+                            <div class="planContainerBottom">
+                                <h4>lorem ipsum</h4>
+                                <ul>
+                                    <li>lorem</li>
+                                    <li>lorem</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col smallCol">
-                        <header class="planType">icon + lorem</header>
-                        <div class="planFeaturesTop">
-                            <h3>plan name</h3>
-                            <span class="planPrice">lorem $</span>
-                            <ul>
-                                <li>lorem</li>
-                                <li>lorem</li>
-                                <li>lorem</li>
-                            </ul>
-                            <a class="btn blueBtn bigBtn" href="#">lorem</a>
-                            <div>
-                                lorem <a href="#"> lorem</a>
+                    <div class="col smallCol smallText">
+                        <header class="planType">
+                            <i class="fa-solid fa-building"></i>
+                            Azienda
+                        </header>
+                        <div class="planContainer">
+                            <div class="planContainerTop">
+                                <h3>Enterprise</h3>
+                                <span class="planPrice">
+                                    Contattaci
+                                    <br>
+                                    <span>-</span>
+                                </span>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <span class="fa-li">
+                                            <i class="fa-solid fa-user"></i>
+                                        </span>
+                                        10 o più utenti
+                                    </li>
+                                    <li>
+                                        <span class="fa-li">
+                                            <i class="fa-solid fa-folder"></i>
+                                        </span>
+                                        Soluzioni personalizzabili per la tua azienda
+                                    </li>
+                                    <li>
+                                        <span class="fa-li">
+                                            <i class="fa-solid fa-circle-nodes"></i>
+                                        </span>
+                                        Assistenza personalizzata per aiutare gli amministratori in una gestione su larga scala
+                                    </li>
+                                </ul>
+                                <a class="btn blueBtn bigBtn" href="#">lorem</a>
+                                <div>
+                                    lorem <a href="#"> lorem</a>
+                                </div>
                             </div>
-                        </div>
-                        <hr class="customHR">
-                        <div class="planFeaturesBottom">
-                            <h4>lorem ipsum</h4>
-                            <ul>
-                                <li>lorem</li>
-                                <li>lorem</li>
-                            </ul>
+                            <hr class="customHR">
+                            <div class="planContainerBottom">
+                                <h4>lorem ipsum</h4>
+                                <ul>
+                                    <li>lorem</li>
+                                    <li>lorem</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
             
-                    <div class="col largeCol">
+                    <div class="col largeCol smallText">
                         <header class="planType"> icon + lorem</header>
                         <div class="row">
                             <h3>lorem</h3>

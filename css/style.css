@@ -34,6 +34,12 @@ body {
     margin: 0 auto;
 }
 
+.smallContainer {
+    margin: 0 auto;
+    max-width: 950px;
+    background-color: thistle;
+}
+
 .btn {
     border: 1px solid black;
     padding: 0.4em 1em;
@@ -52,8 +58,22 @@ body {
     font-size: 0.9rem;
 }
 
-.text {
+.smallText {
+    font-size: 0.8rem;
+}
+
+.bigText {
     font-size: 0.9rem;
+    color: #252525;;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #252525;
+}
+
+h3 {
+    font-size: 1.3rem;
     color: #252525;;
 }
 
@@ -140,7 +160,6 @@ header nav div ul li a{
 #jumbotronSection i {
     margin-top: 3.5rem;
     font-size: 3rem;
-    color: #252525;
 }
 
 #jumbotronSection .largeContainer > div > div:last-child {
@@ -153,53 +172,129 @@ header nav div ul li a{
 
 /* --- MAIN --- */
 main {
+    margin: 9rem 0;
+}
+
+main #plansSection {
+    width: 100%;
+    margin-bottom: 9rem;
     background-color: wheat;
 }
 
-.smallContainer {
-    margin: 8rem auto;
-    max-width: 1000px;
-    /* height: 20vh; */
-    background-color: thistle;
+#plansSection #planSelector {
+    margin: 2.5rem 0;
 }
 
-main #plans {
-
-    /*temp*/
-    width: 100%;
-    background-color: yellow;
+#planSelector input[type="radio"] {
+    display: none;
 }
 
-#plans #planSelector {
-    margin: 1rem 0;
+#plansSection #planSelector label {
+    margin: 0 1.5rem;
+    position: relative;
+    cursor: pointer;
 }
 
-#plans #planSelector label {
-    margin-right: 1.5rem;
+#planSelector label::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+
+    position: absolute;
+    right: 102%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: 2px solid gray;
+    border-radius: 50%;
+
+    background-color: #ffffff;
+    transition: all 0.1s;
 }
 
-#plans .colContainer {
+#planSelector input:checked + label::before {
+    width: 10px;
+    height: 10px;
+    border: 5px solid #0061ff;
+}
+
+#plansSection .colContainer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
-
-}
-
-#plans .colContainer .col {
-
-
-    display: flex;
-    flex-direction: column;
-
-    border: 3px dotted red;
 }
 
 .smallCol {
     width: calc((100% / 3) - calc(2rem / 3));
 }
 
-#plans .largeCol .row {
+.col {
+    border: 1px solid lightgrey;
+}
+
+.col > header {
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.col > .planContainer {
+    padding: 2.0rem 1.8rem;
+}
+
+.planContainer .planContainerTop {
+    display: flex;
+    flex-direction: column;
+}
+
+#plansSection .planPrice {
+    margin: 0.8rem 0 1.8rem;
+    font-weight: bold;
+}
+
+#plansSection .planPrice br {
+    margin: 0.5rem 0;
+}
+
+#plansSection .planPrice span {
+    color: gray;
+}
+
+#plansSection .planPrice::before{
+    content: '\20AC';
+}
+
+#plansSection ul li:nth-of-type(1){
+    list-style-image: content;
+  }
+
+.planContainer > .planContainerTop > .fa-ul  {
+ 
+    margin-left: 15px;
+}
+
+#planSection ul li {
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#plansSection .largeCol .row {
     width: 100%;
     display: flex;
     /* background-color: violet; */
