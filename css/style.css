@@ -44,6 +44,7 @@ body {
     border: 1px solid black;
     padding: 0.4em 1em;
     text-decoration: none;
+    text-align: center;
 }
 
 .blueBtn {
@@ -53,8 +54,8 @@ body {
 }
 
 .bigBtn {
-    margin: 1.5rem 0;
-    padding: 0.6em 0.9em;
+    margin: 0;
+    padding: 0.7em 0.9em;
     font-size: 0.9rem;
 }
 
@@ -75,6 +76,13 @@ h2 {
 h3 {
     font-size: 1.3rem;
     color: #252525;;
+}
+
+.customHR {
+    width: 20%;
+    border-color: lightgray;
+    border-top: none;
+    margin: 2rem 0;
 }
 
 /* --- HEADER --- */
@@ -232,6 +240,7 @@ main #plansSection {
 
 .col {
     border: 1px solid lightgrey;
+    background-color: #ffffff;
 }
 
 .col > header {
@@ -250,7 +259,6 @@ main #plansSection {
 }
 
 #plansSection .planPrice {
-    margin: 0.8rem 0 1.8rem;
     font-weight: bold;
 }
 
@@ -263,31 +271,58 @@ main #plansSection {
 }
 
 #plansSection .planPrice::before{
-    content: '\20AC';
+    content: '\20AC';  /*euro icon*/
 }
-
-#plansSection ul li:nth-of-type(1){
-    list-style-image: content;
-  }
-
-.planContainer > .planContainerTop > .fa-ul  {
- 
-    margin-left: 15px;
-}
-
-#planSection ul li {
+.planContainer ul {
     list-style: none;
+    margin: 2.5rem 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.3rem;
 }
 
+.planContainer ul li{
+    position: relative;
+    list-style: none;
+    margin-left: 10px;
+}
 
+.planContainer ul li::before {
+    font-family: 'FontAwesome';
 
+    position: absolute;
+    right: 102%;
+    top: 0;
+}
 
+.planContainer > .planContainerTop ul li:nth-of-type(1)::before  {
+    content: '\f007';  /*user icon*/
+}
 
+.planContainer > .planContainerTop ul li:nth-of-type(2)::before  {
+    content: '\f07b';
+}
 
+.planContainer > .planContainerTop ul li:nth-of-type(3)::before  {
+    content: '\e4e2';
+}
 
+.planContainer .btn {
+    margin-bottom: 1.5rem;
+    /* font-size: 0.8rem; */
+}
 
+.planContainerBottom h4 {
+    margin: 0.5rem 0 1.7rem;
+}
 
-
+.planContainerBottom ul li::before {
+    content: '\f00c';
+    color: #0061ff;
+    font-weight: bold;
+}
 
 
 
