@@ -258,6 +258,10 @@ main #plansSection {
     flex-direction: column;
 }
 
+.planContainerTop div a {
+    color: blue;
+}
+
 #plansSection .planPrice {
     font-weight: bold;
 }
