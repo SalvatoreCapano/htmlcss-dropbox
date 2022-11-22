@@ -18,7 +18,7 @@
     asu: #61082b
     uf: #0093ce
     topps: #ff1c1c
-    designit-2: f5f5f5
+    designit-2: #f5f5f5
     wbr: #d5001f
     hearst: #b4d0e7
     lonely-planet: #0d2481
@@ -72,6 +72,7 @@ body {
 h2 {
     font-size: 2rem;
     color: #252525;
+    margin-bottom: 2.5rem;
 }
 
 h3 {
@@ -97,6 +98,10 @@ h3 {
 
 .largeCol {
     width: 100%;
+}
+
+.linkColor {
+    color: blue;
 }
 
 /* --- HEADER --- */
@@ -207,7 +212,7 @@ main .smallContainer > section{
 
 /* --- PLANS SECTION --- */
 #plansSection #planSelector {
-    margin: 2.5rem 0;
+    margin-bottom: 2.5rem;
 }
 
 #planSelector input[type="radio"] {
@@ -330,10 +335,6 @@ main .smallContainer > section{
     margin: 1.8rem 0;
 }
 
-.planContainerTop div a {
-    color: blue;
-}
-
 .planContainerBottom h4 {
     margin: 0.5rem 0 1.7rem;
 }
@@ -416,6 +417,91 @@ main .smallContainer > section{
 .card img {
     width: 100%;
 }
+
+.card h3 {
+    margin-bottom: 1.5rem;
+}
+
+#quotesSection {
+    width: 100vw;
+
+    display: flex;
+}
+
+#quotesSection > div {
+    width: calc(100vw /3);
+    height: calc(100vw /3);
+}
+
+.customerGroup {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.customerGroup .customer {
+    width: calc(100vw / 6);
+    height: calc(100vw / 6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customerGroup .customer img {
+    width: 50%;
+    filter: invert(1);
+}
+
+#customerQuote {
+    overflow: scroll;
+    background-color: #f5f5f5;
+    padding: 3rem;
+}
+
+#customerQuote img {
+    width: 50%;
+}
+
+#customerQuote blockquote {
+    margin-bottom: 2.5rem;
+}
+
+.customerGroup:first-child .customer:nth-of-type(1){
+    background-color: #a2d39b;
+    border: 15px solid #d1e9cd;
+}
+
+.customerGroup:first-child .customer:nth-of-type(2){
+    background-color: #61082b;
+}
+
+.customerGroup:first-child .customer:nth-of-type(3){
+    background-color: #0093ce;
+}
+
+.customerGroup:first-child .customer:nth-of-type(4){
+    background-color: #ff1c1c;
+}
+
+.customerGroup:last-child .customer:nth-of-type(1){
+    background-color: #d5001f;
+}
+
+.customerGroup:last-child .customer:nth-of-type(2){
+    background-color: #b4d0e7;
+}
+
+.customerGroup:last-child .customer:nth-of-type(3){
+    background-color: #0d2481;
+}
+
+.customerGroup:last-child .customer:nth-of-type(4){
+    background-color: #ffd830;
+}
+
+
+
+
 
 
 
