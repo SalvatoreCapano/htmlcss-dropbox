@@ -33,13 +33,13 @@ body {
 .smallContainer {
     max-width: 1000px;
     margin: 0 auto;
-    background-color: firebrick;
+    /* background-color: firebrick; */
 }
 
 .largeContainer {
     max-width: 1180px;
     margin: 0 auto;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 .smallText {
@@ -54,6 +54,7 @@ body {
 
 .btn {
     border: 1px solid black;
+    background-color: white;
     padding: 0.4em 1em;
     text-decoration: none;
     text-align: center;
@@ -263,7 +264,7 @@ main .smallContainer > section{
 }
 
 #plansSection .col > .planContainer {
-    padding: 2.0rem 1.8rem;
+    padding: 1.8rem 2.1rem;
 }
 
 .col .planContainer .planContainerTop {
@@ -422,8 +423,10 @@ main .smallContainer > section{
     margin-bottom: 1.5rem;
 }
 
+/* --- QUOTES SECTION --- */
 #quotesSection {
     width: 100vw;
+    margin-bottom: 0;
 
     display: flex;
 }
@@ -499,38 +502,105 @@ main .smallContainer > section{
     background-color: #ffd830;
 }
 
-
-
-
-
-
-
-
-section {
-    background-color: yellow;
-    margin-bottom: 2rem
+/* --- FREE TRIAL SECTION --- */
+#freeTrialSection {
+    background-color: #b4d0e7;
+    margin-top: 0;
+    padding: 7rem 0;
 }
 
-#dropboxBusinessSection .smallContainer {
+#freeTrialSection .smallContainer {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
+#freeTrialSection h2 {
+    margin: 0;
+}
+
+#freeTrialSection .btn {
+    border: none;
+    padding: 0.7em 3em;
+}
+
+/* --- FAQ SECTION --- */
 #faqSection .faqContainer {
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid lightgray;
+    padding: 2rem 2rem 2rem 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#faqSection .faqContainer i {
+
 }
 
 #faqSection .faqContainer:first-of-type {
-    border-top: 1px solid red;
+    border-top: 1px solid lightgray;
 }
 
+#faqSection .question {
+    font-weight: bold;
+}
+
+#faqSection .answer {
+    display: none;
+    margin-top: 0.5rem;
+}
+
+/* #faqSection .faqContainer:hover .answer {
+    display: inline-block;
+} */
+
+/* --- FOOTER --- */
 footer {
     width: 100%;
-    background-color: wheat;
+    background-color: #000000;
+    padding: 6rem 0 2.5rem;
 }
 
 #linkListsContainer {
     display: flex;
-    gap: 3rem;
+    justify-content: space-between;
 }
 
+#linkListsContainer h3 {
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+#linkListsContainer ul {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+#linkListsContainer ul li {
+    margin-bottom: 0.8rem;
+}
+
+#linkListsContainer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer #langSelector {
+    color: darkgrey;
+}
+
+footer #langSelector::before {
+    font-family: 'FontAwesome';
+    content: '\f57d';
+
+    margin-right: 0.5rem;
+}
+
+footer #langSelector::after {
+    font-family: 'FontAwesome';
+    content: '\f0d8';
+
+    margin-left: 0.5rem;
+}
