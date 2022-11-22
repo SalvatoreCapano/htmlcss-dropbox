@@ -33,7 +33,7 @@ body {
 .smallContainer {
     max-width: 1000px;
     margin: 0 auto;
-    background-color: red;
+    background-color: firebrick;
 }
 
 .largeContainer {
@@ -84,6 +84,19 @@ h3 {
     border-color: lightgray;
     border-top: none;
     margin: 2rem 0;
+}
+
+.col {
+    border: 1px solid lightgrey;
+    background-color: #ffffff;
+}
+
+.smallCol {
+    width: calc((100% / 3) - calc(5rem / 3));
+}
+
+.largeCol {
+    width: 100%;
 }
 
 /* --- HEADER --- */
@@ -192,12 +205,7 @@ main .smallContainer > section{
     width: 100%;
 }
 
-main #plansSection {
-    width: 100%;
-    margin-bottom: 9rem;
-    background-color: wheat;
-}
-
+/* --- PLANS SECTION --- */
 #plansSection #planSelector {
     margin: 2.5rem 0;
 }
@@ -206,7 +214,7 @@ main #plansSection {
     display: none;
 }
 
-#plansSection #planSelector label {
+#planSelector label {
     margin: 0 1.5rem;
     position: relative;
     cursor: pointer;
@@ -243,52 +251,45 @@ main #plansSection {
     gap: 2.5rem;
 }
 
-.smallCol {
-    width: calc((100% / 3) - calc(5rem / 3));
-}
-
-.col {
-    border: 1px solid lightgrey;
-    background-color: #ffffff;
-}
-
-.col > header {
+#plansSection .col > header {
     border-bottom: 1px solid lightgray;
     text-align: center;
     padding: 0.5rem 0;
 }
 
-.col > .planContainer {
+#plansSection .col > .planContainer {
     padding: 2.0rem 1.8rem;
 }
 
-.planContainer .planContainerTop {
+.col .planContainer .planContainerTop {
     display: flex;
     flex-direction: column;
 }
 
-.planContainerTop div a {
-    color: blue;
-}
-
-#plansSection .planPrice {
+.col .planPrice {
     font-weight: bold;
+    margin-bottom: 2rem;
 }
 
-#plansSection .planPrice br {
+.col .planPrice br {
     margin: 0.5rem 0;
 }
 
-#plansSection .planPrice span {
+.col .planPrice span {
     color: gray;
+    font-weight: 500;
 }
 
-#plansSection .planPrice::before{
+.col .planPrice::before{
     content: '\20AC';  /*euro icon*/
 }
+
+.smallCol .planPrice::before{
+    content: '';
+}
+
 .planContainer ul {
     list-style: none;
-    margin: 2.5rem 0;
 
     display: flex;
     flex-direction: column;
@@ -298,7 +299,6 @@ main #plansSection {
 
 .planContainer ul li{
     position: relative;
-    list-style: none;
     margin-left: 10px;
 }
 
@@ -306,7 +306,7 @@ main #plansSection {
     font-family: 'FontAwesome';
 
     position: absolute;
-    right: 102%;
+    left: -20px;
     top: 0;
 }
 
@@ -322,9 +322,16 @@ main #plansSection {
     content: '\e4e2';
 }
 
+.col:nth-of-type(2) .planContainer > .planContainerTop ul li:first-child::before  {
+    content: '\f0c0';
+}
+
 .planContainer .btn {
-    margin-bottom: 1.5rem;
-    /* font-size: 0.8rem; */
+    margin: 1.8rem 0;
+}
+
+.planContainerTop div a {
+    color: blue;
 }
 
 .planContainerBottom h4 {
@@ -337,34 +344,62 @@ main #plansSection {
     font-weight: bold;
 }
 
-
-
-
-
-
-#plansSection .largeCol .row {
-    width: 100%;
+.largeCol .planContainer{
     display: flex;
-    /* background-color: violet; */
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-#partner {
-    background-color: teal;
-    margin: 5rem 0;
+.largeCol .planContainer > div {
+    width: 70%;
+}
+
+.largeCol .btn {
+    margin: 0;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+
+.largeCol h4 {
+    margin: 1rem 0 2.5rem;
+}
+
+/* --- PARTNER SECTION --- */
+#partnerSection .smallContainer {
     display: flex;
 }
 
-#partner .imgContainer {
-    background-color: violet;
+#partnerSection .imgContainer {
     width: 60%;
 }
 
-#partner .textContainer {
+#partnerSection .imgContainer img{
+    width: 100%;
+    display: block;
+}
 
+#partnerSection .textContainer {
+    padding: 3rem;
     width: 40%;
 }
+
+#partnerSection .textContainer h3{
+    margin-bottom: 1rem;
+}
+
+#partnerSection .textContainer p{
+    margin-bottom: 2rem;
+}
+
+#partnerSection .btn {
+    color: #252525;
+    border-color: currentColor;
+
+    font-size: 0.9rem;
+}
+
+
 
 .cardContainer {
     display: flex;
