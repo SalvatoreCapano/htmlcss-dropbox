@@ -29,15 +29,27 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
+
+.smallContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: red;
+}
+
 .largeContainer {
     max-width: 1180px;
     margin: 0 auto;
+    background-color: orange;
 }
 
-.smallContainer {
-    margin: 0 auto;
-    max-width: 950px;
-    background-color: thistle;
+.smallText {
+    font-size: 0.8rem;
+    color: #252525;
+}
+
+.bigText {
+    font-size: 0.9rem;
+    color: #252525;
 }
 
 .btn {
@@ -47,25 +59,14 @@ body {
     text-align: center;
 }
 
+.bigBtn {
+    padding: 0.7em 0.9em;
+}
+
 .blueBtn {
+    border: none;
     color: #ffffff;
     background-color: #0061ff;
-    border: none;
-}
-
-.bigBtn {
-    margin: 0;
-    padding: 0.7em 0.9em;
-    font-size: 0.9rem;
-}
-
-.smallText {
-    font-size: 0.8rem;
-}
-
-.bigText {
-    font-size: 0.9rem;
-    color: #252525;;
 }
 
 h2 {
@@ -128,36 +129,44 @@ header nav div ul li a{
     color: #252525;
 }
 
+/* --- MAIN --- */
+main {
+    margin-top: 8vh;
+}
+
+main > section {
+    margin: 9rem 0;
+}
+
+main .smallContainer > section{
+    margin-top: 9rem;
+}
+
 /* --- JUMBOTRON --- */
 #jumbotronSection {
-    width: 100%;
-    margin-top: 8vh;
-    
     background-color: #b4d0e7;
+    margin: 0;
 }
 
 #jumbotronSection > .largeContainer {
-    height: 100%;
-
     position: relative;
     top: 70px;
 }
 
 #jumbotronSection > .largeContainer h1 {
-    margin: 2rem 0 3rem;
     font-size: 4rem;
     font-weight: 800;
+    margin-bottom: 3rem;
 }
 
 #jumbotronSection .largeContainer > div {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
 
     width: 100%;
 }
 
-#jumbotronSection .largeContainer > div > div:first-child {
+#jumbotronSection .largeContainer > div > .textContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -165,22 +174,22 @@ header nav div ul li a{
     width: 31%;
 }
 
-#jumbotronSection i {
-    margin-top: 3.5rem;
-    font-size: 3rem;
+#jumbotronSection .btn {
+    margin: 2rem 0;
 }
 
-#jumbotronSection .largeContainer > div > div:last-child {
+#jumbotronSection i {
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: #252525;
+}
+
+#jumbotronSection .largeContainer > div > .imgContainer {
     width: 68%;
 }
 
 #jumbotronSection img {
     width: 100%;
-}
-
-/* --- MAIN --- */
-main {
-    margin: 9rem 0;
 }
 
 main #plansSection {
@@ -231,11 +240,11 @@ main #plansSection {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2.5rem;
 }
 
 .smallCol {
-    width: calc((100% / 3) - calc(2rem / 3));
+    width: calc((100% / 3) - calc(5rem / 3));
 }
 
 .col {
@@ -279,7 +288,7 @@ main #plansSection {
 }
 .planContainer ul {
     list-style: none;
-    margin: 2.5rem 0 0;
+    margin: 2.5rem 0;
 
     display: flex;
     flex-direction: column;
@@ -399,3 +408,4 @@ footer {
     display: flex;
     gap: 3rem;
 }
+
