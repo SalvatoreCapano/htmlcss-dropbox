@@ -33,13 +33,11 @@ body {
 .smallContainer {
     max-width: 1000px;
     margin: 0 auto;
-    /* background-color: firebrick; */
 }
 
 .largeContainer {
     max-width: 1180px;
     margin: 0 auto;
-    /* background-color: orange; */
 }
 
 .smallText {
@@ -126,7 +124,7 @@ header nav {
     justify-content: space-between;
 }
 
-header nav div ul {
+header nav div .navList {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -135,17 +133,73 @@ header nav div ul {
     list-style: none;
 }
 
-header nav div ul li{
+header nav div .navList > li{
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-header nav div ul li a{
+header nav div .navList > li > a{
     text-decoration: none;
     padding: 0.4rem;
     font-size: 0.9rem;
     color: #252525;
+}
+
+/* --- HEADER HOVER MENU --- */
+header nav div:first-child .navList > li:nth-of-type(2){
+    position: relative;
+}
+
+.menu {
+    background-color: #e7e7e7;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+
+.menu > div {
+    min-width: 250px;
+}
+
+.menu h3 {
+    font-size: 0.7rem;
+    padding: 8px;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    padding: 0;
+    list-style: none;
+}
+
+.menu ul li {
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.menu ul li:hover {
+    background-color: #bfbfbf;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #252525;
+    font-size: 0.7rem;
+}
+
+header nav div:first-child .navList > li:nth-of-type(2):hover{
+    background-color: #e7e7e7;
+}
+
+header nav div:first-child .navList > li:nth-of-type(2):hover .menu{
+    display: flex;
 }
 
 /* --- MAIN --- */
@@ -535,10 +589,6 @@ main .smallContainer > section{
     align-items: center;
 }
 
-#faqSection .faqContainer i {
-
-}
-
 #faqSection .faqContainer:first-of-type {
     border-top: 1px solid lightgray;
 }
@@ -547,14 +597,22 @@ main .smallContainer > section{
     font-weight: bold;
 }
 
+#faqSection i {
+    transition: transform 0.2s;
+}
+
 #faqSection .answer {
     display: none;
     margin-top: 0.5rem;
 }
 
-/* #faqSection .faqContainer:hover .answer {
+#faqSection .faqContainer:hover .answer {
     display: inline-block;
-} */
+}
+
+#faqSection .faqContainer:hover i {
+    transform: rotate(180deg);
+}
 
 /* --- FOOTER --- */
 footer {
