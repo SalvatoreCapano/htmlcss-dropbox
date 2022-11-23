@@ -166,7 +166,7 @@ header nav div .navList > li > a:not(.btn){
     color: #252525;
 }
 
-header .navList > li:not(.btnContainer):hover::before {
+header .navList > li:hover::before {
     content: '';
     height: 2px;
     width: 100%;
@@ -176,6 +176,11 @@ header .navList > li:not(.btnContainer):hover::before {
     top: 100%;
     left: 0;
     /* z-index: 5; */
+}
+
+header .navList > li:first-child::before,
+header .navList > li:last-child::before {
+    background-color: transparent;
 }
 
 /* --- HEADER HOVER MENU --- */
