@@ -669,3 +669,103 @@ footer #langSelector::after {
 
     margin-left: 0.5rem;
 }
+
+/* --- PAGINA BONUS --- */
+.cloudStorage section {
+    width: 100%;
+    margin: 80px 0;
+}
+
+.cloudStorage #heroSection,
+.cloudStorage section:last-child {
+    background-color: #1e1919;
+    display: flex;
+}
+
+.cloudStorage #heroSection .textContainer {
+    width: 35%;
+
+    padding: 2.5rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    color: #f7f5f2;
+}
+
+.cloudStorage #heroSection .textContainer h1 {
+    font-size: 2.5rem;
+}
+
+.cloudStorage #heroSection .imgContainer {
+    width: 65%;
+
+    background-color: #c8aff0;
+}
+
+.cloudStorage #heroSection .imgContainer img {
+    width: 40%;
+}
+
+.cloudStorage .contentSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.cloudStorage .contentSection .textContainer {
+    width: 20%;
+    color: #1e1919;
+}
+
+.cloudStorage .contentSection .textContainer h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    margin-bottom: 1rem;
+}
+
+.cloudStorage .contentSection .textContainer p {
+    font-size: 0.9rem;
+}
+
+.cloudStorage .imgContainer {
+    width: 58%;
+    padding: 3rem 0;
+
+    background-color: #eee9e2;
+}
+
+.cloudStorage .imgContainer img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.cloudStorage .contentSection:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.cloudStorage section:last-child {
+    padding: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    color: #f7f5f2;
+}
+
+.cloudStorage section:last-child h3 {
+    width: 50%;
+    color: #f7f5f2;
+    font-size: 2.5rem;
+}
+
+.cloudStorage .btn {
+    padding: 1.5em;
+    color: #1e1919;
+    font-weight: bold;
+}
