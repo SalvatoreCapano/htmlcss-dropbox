@@ -1,3 +1,5 @@
+
+
 /*CSS RESET*/
 * {
     margin: 0;
@@ -103,6 +105,21 @@ h3 {
     color: blue;
 }
 
+.flexSpBt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexWrap {
+    display: flex;
+    flex-wrap:  wrap;
+}
+
 /* --- HEADER --- */
 body > header {
     width: 100vw;
@@ -119,9 +136,6 @@ body > header {
 
 header nav {
     height: 100%;
-
-    display: flex;
-    justify-content: space-between;
 }
 
 header nav div .navList {
@@ -133,22 +147,44 @@ header nav div .navList {
     list-style: none;
 }
 
-header nav div .navList > li{
+header nav div .navList li{
     display: flex;
     align-items: center;
     height: 100%;
+
+    position: relative;
 }
 
-header nav div .navList > li > a{
+header nav div .navList > li > a:not(.btn){
     text-decoration: none;
     padding: 0.4rem;
     font-size: 0.9rem;
     color: #252525;
 }
 
+header .navList > li:not(.btnContainer):hover::before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #000000;
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    /* z-index: 5; */
+}
+
 /* --- HEADER HOVER MENU --- */
-header nav div:first-child .navList > li:nth-of-type(2){
+header nav div:first-child .navList > li{
     position: relative;
+}
+
+.navList .menuListItem:hover{
+    background-color: #e7e7e7;
+}
+
+.navList .menuListItem:hover .menu{
+    display: flex;
 }
 
 .menu {
@@ -172,7 +208,9 @@ header nav div:first-child .navList > li:nth-of-type(2){
 .menu ul {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    align-items: stretch;
+    justify-content: flex-start;
+    /* gap: 0; */
 
     padding: 0;
     list-style: none;
@@ -192,14 +230,6 @@ header nav div:first-child .navList > li:nth-of-type(2){
     text-decoration: none;
     color: #252525;
     font-size: 0.7rem;
-}
-
-header nav div:first-child .navList > li:nth-of-type(2):hover{
-    background-color: #e7e7e7;
-}
-
-header nav div:first-child .navList > li:nth-of-type(2):hover .menu{
-    display: flex;
 }
 
 /* --- MAIN --- */
@@ -233,15 +263,10 @@ main .smallContainer > section{
 }
 
 #jumbotronSection .largeContainer > div {
-    display: flex;
-    justify-content: space-between;
-
     width: 100%;
 }
 
 #jumbotronSection .largeContainer > div > .textContainer {
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
 
     width: 31%;
@@ -305,9 +330,6 @@ main .smallContainer > section{
 }
 
 #plansSection .colContainer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     gap: 2.5rem;
 }
 
@@ -319,11 +341,6 @@ main .smallContainer > section{
 
 #plansSection .col > .planContainer {
     padding: 1.8rem 2.1rem;
-}
-
-.col .planContainer .planContainerTop {
-    display: flex;
-    flex-direction: column;
 }
 
 .col .planPrice {
@@ -351,8 +368,6 @@ main .smallContainer > section{
 .planContainer ul {
     list-style: none;
 
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     gap: 1.3rem;
 }
@@ -386,7 +401,7 @@ main .smallContainer > section{
     content: '\f0c0';
 }
 
-.planContainer .btn {
+.smallCol .planContainer .btn {
     margin: 1.8rem 0;
 }
 
@@ -401,10 +416,7 @@ main .smallContainer > section{
 }
 
 .largeCol .planContainer{
-    display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
 }
 
 .largeCol .planContainer > div {
@@ -412,7 +424,6 @@ main .smallContainer > section{
 }
 
 .largeCol .btn {
-    margin: 0;
     padding-left: 2.5em;
     padding-right: 2.5em;
 }
@@ -457,16 +468,12 @@ main .smallContainer > section{
 
 /* --- CARD SECTION --- */
 #cardSection .cardContainer {
-    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 2.5rem;
 }
 
 .card {
     width: calc((100% / 3) - calc(5rem / 3));
-    display: flex;
-    flex-direction: column;
 }
 
 .card img {
@@ -490,11 +497,6 @@ main .smallContainer > section{
     height: calc(100vw /3);
 }
 
-.customerGroup {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .customerGroup .customer {
     width: calc(100vw / 6);
     height: calc(100vw / 6);
@@ -502,6 +504,9 @@ main .smallContainer > section{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border: 15px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
 }
 
 .customerGroup .customer img {
@@ -525,7 +530,6 @@ main .smallContainer > section{
 
 .customerGroup:first-child .customer:nth-of-type(1){
     background-color: #a2d39b;
-    border: 15px solid #d1e9cd;
 }
 
 .customerGroup:first-child .customer:nth-of-type(2){
@@ -556,6 +560,10 @@ main .smallContainer > section{
     background-color: #ffd830;
 }
 
+.customerGroup .customer:hover {
+    border: 15px solid rgba(255, 255, 255, 0.5);
+}
+
 /* --- FREE TRIAL SECTION --- */
 #freeTrialSection {
     background-color: #b4d0e7;
@@ -564,8 +572,6 @@ main .smallContainer > section{
 }
 
 #freeTrialSection .smallContainer {
-    display: flex;
-    justify-content: space-between;
     align-items: flex-start;
 }
 
@@ -583,10 +589,19 @@ main .smallContainer > section{
     border-bottom: 1px solid lightgray;
     padding: 2rem 2rem 2rem 0;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+}
+
+#faqSection .faqContainer:hover .answer{
+    display: block;
+}
+
+#faqSection .faqContainer i {
+    transition: transform 0.2s;
+}
+
+#faqSection .faqContainer:hover i {
+    transform: rotate(-180deg);
 }
 
 #faqSection .faqContainer:first-of-type {
@@ -597,21 +612,9 @@ main .smallContainer > section{
     font-weight: bold;
 }
 
-#faqSection i {
-    transition: transform 0.2s;
-}
-
 #faqSection .answer {
     display: none;
     margin-top: 0.5rem;
-}
-
-#faqSection .faqContainer:hover .answer {
-    display: inline-block;
-}
-
-#faqSection .faqContainer:hover i {
-    transform: rotate(180deg);
 }
 
 /* --- FOOTER --- */
@@ -619,11 +622,6 @@ footer {
     width: 100%;
     background-color: #000000;
     padding: 6rem 0 2.5rem;
-}
-
-#linkListsContainer {
-    display: flex;
-    justify-content: space-between;
 }
 
 #linkListsContainer h3 {
