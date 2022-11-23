@@ -120,6 +120,10 @@ h3 {
     flex-wrap:  wrap;
 }
 
+.blueBtn:hover {
+    background-color: #004cc5;
+}
+
 /* --- HEADER --- */
 body > header {
     width: 100vw;
