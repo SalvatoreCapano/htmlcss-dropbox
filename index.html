@@ -21,7 +21,8 @@
 <body>
 
     <header>
-        <nav>
+        <nav class="flexSpBt">
+            <!-- nav left side -->
             <div>
                 <ul>
                     <li>
@@ -39,7 +40,9 @@
                         <a href="#">Piani e Prezzi</a>
                     </li>
                 </ul>
-            </div>
+            </div> <!-- /nav left side -->
+
+            <!-- nav right side -->
             <div>
                 <ul>
                     <li>
@@ -55,7 +58,7 @@
                         <a class="btn blueBtn" href="#">Inizia</a>
                     </li>
                 </ul>
-            </div>
+            </div> <!-- /nav right side -->
         </nav>
     </header>
 
@@ -64,8 +67,8 @@
         <section id="jumbotronSection">
             <div class="largeContainer">
                 <h1>Tutto ciò che ti serve per il lavoro, in un unico posto</h1>
-                <div> <!-- container -->
-                    <div class="textContainer">
+                <div class="flexSpBt"> <!-- container -->
+                    <div class="textContainer flexCol">
                         <p class="bigText">
                             Finalmente tutti i tuoi strumenti, contenuti e 
                             collaboratori sono accessibili dallo stesso posto.
@@ -74,20 +77,19 @@
                             sicuro: è un modo intelligente e integrato per 
                             ottimizzare il flusso di lavoro esistente.
                         </p>
-                        <a class="btn blueBtn bigBtn" href="#">Inizia la tua prova gratuita</a>
+                        <a class="btn blueBtn bigBtn bigText" href="#">Inizia la tua prova gratuita</a>
                         <span class="bigText">Annulla in qualsiasi momento</span>
                         <a href="#plansSection">
                             <i class="fa-sharp fa-solid fa-arrow-down"></i>
                         </a>
-                    </div>
+                    </div> <!-- /textContainer-->
                     <div class="imgContainer">
                         <img src="img/jumbo.png" alt="jumbotron">
-                    </div>
+                    </div> <!-- /imgContainer-->
                 </div> <!-- /container -->
-            </div>
+            </div>   <!-- /largeContainer -->
         </section> <!-- /jumbotronSection-->
 
-            
         <section id="plansSection">
             <div class="smallContainer">
                 <h2>Trova il piano business che fa per te</h2>
@@ -99,7 +101,7 @@
                     <label class="smallText" for="yearlyPlan">Fatturazione annuale</label>
                 </div>
                 <!-- Plans Container -->
-                <div class="colContainer">
+                <div class="colContainer flexWrap">
 
                     <!-- Piano Singolo -->
                     <div class="col smallCol smallText">
@@ -108,14 +110,14 @@
                             Singolo
                         </header>
                         <div class="planContainer">
-                            <div class="planContainerTop">
+                            <div class="planContainerTop flexCol">
                                 <h3>Professional</h3>
                                 <span class="planPrice">
                                     12.00
                                     <br>
                                     <span>/mese</span>
                                 </span>
-                                <ul>
+                                <ul class="flexCol">
                                     <li>1 utente</li>
                                     <li>5 TB di spazio di archiviazione sicuro</li>
                                     <li>Funzioni di produttività premium e condivisione file semplice e sicura</li>
@@ -128,7 +130,7 @@
                             <hr class="customHR">
                             <div class="planContainerBottom">
                                 <h4>Punti Salienti del piano</h4>
-                                <ul>
+                                <ul class="flexCol">
                                     <li>Invia file fino a 100GB con Dropbox Transfert</li>
                                     <li>Cartelle offline su dispositivi mobili</li>
                                 </ul>
@@ -143,14 +145,14 @@
                             Team
                         </header>
                         <div class="planContainer"> 
-                            <div class="planContainerTop">
+                            <div class="planContainerTop flexCol">
                                 <h3>Advanced</h3>
                                 <span class="planPrice">
                                     18.00
                                     <br>
                                     <span>/utente/mese</span>
                                 </span>
-                                <ul>
+                                <ul class="flexCol">
                                     <li>3 o più utenti</li>
                                     <li>Tutto lo spazio di cui ha bisogno il tuo team</li>
                                     <li>Sofisticate funzioni di controllo e per tenere al sicuro tutti i file del tuo team</li>
@@ -163,7 +165,7 @@
                             <hr class="customHR">
                             <div class="planContainerBottom">
                                 <h4>Punti Salienti del piano</h4>
-                                <ul>
+                                <ul class="flexCol">
                                     <li>Nessun limite di spazio per i file</li>
                                     <li>Cartelle offline su dispositivi mobili</li>
                                     <li>Risparmio del 50% rispetto alle iscrizioni singole</li>
@@ -181,14 +183,14 @@
                             Azienda
                         </header>
                         <div class="planContainer">
-                            <div class="planContainerTop">
+                            <div class="planContainerTop flexCol">
                                 <h3>Enterprise</h3>
                                 <span class="planPrice">
                                     Contattaci
                                     <br>
                                     <span>-</span>
                                 </span>
-                                <ul>
+                                <ul class="flexCol">
                                     <li>10 o più utenti</li>
                                     <li>Soluzioni personalizzabili per la tua azienda</li>
                                     <li>Assistenza personalizzata per aiutare gli amministratori in una gestione su larga scala</li>
@@ -201,7 +203,7 @@
                             <hr class="customHR">
                             <div class="planContainerBottom">
                                 <h4>Punti Salienti del piano</h4>
-                                <ul>
+                                <ul class="flexCol">
                                     <li>Cartelle offline su dispositivi mobili</li>
                                     <li>Servizio assistenza 24/h</li>
                                     <li>Possibilità di personalizzazione totale</li>
@@ -215,7 +217,7 @@
                             <i class="fa-solid fa-building"></i>
                             Team
                         </header>
-                        <div class="planContainer">
+                        <div class="planContainer flexSpBt flexWrap">
                             <div> <!-- container -->
                                 <h3>Enterprise</h3>
                                 <h4>Contatta l'ufficio vendite per i prezzi</h4>
@@ -223,12 +225,12 @@
                                     i professionisti IT nella gestione su qualsiasi scala.
                                 </p>
                             </div>
-                            <a class="btn blueBtn bigBtn" href="#">Contatta l'ufficio vendite</a>
+                            <a class="btn blueBtn bigBtn smallText" href="#">Contatta l'ufficio vendite</a>
                         </div>
                     </div> <!-- /largeCol-->
 
-                </div>  <!-- /Plans Container -->
-            </div>
+                </div> <!-- / columnsContainer -->
+            </div>  <!-- /smallContainer-->
         </section> <!-- /plansSection-->
 
         <section id="partnerSection">
@@ -252,7 +254,7 @@
         <section id="cardSection">
             <div class="smallContainer">
                 <h2>Esegui più operazioni con Dropbox Business</h2>
-                <div class="cardContainer">
+                <div class="cardContainer flexWrap">
                     <div class="card">
                         <img src="img/business-feature-switching-tools.png" alt="feature 1">
                         <h3>Passa di meno da uno strumento all'altro</h3>
@@ -334,7 +336,7 @@
 
         <section id="quotesSection">
 
-            <div class="customerGroup">
+            <div class="customerGroup flexWrap">
                 <div class="customer">
                     <img src="img/designit.svg" alt="designit">
                 </div>
@@ -366,7 +368,7 @@
                 </span>
             </div>
     
-            <div class="customerGroup">
+            <div class="customerGroup flexWrap">
                 <div class="customer">
                     <img src="img/world_bicycle_relief.svg" alt="wbr">
                 </div>
@@ -384,7 +386,7 @@
         </section> <!-- /quotesSection-->
     
         <section id="freeTrialSection">
-            <div class="smallContainer">
+            <div class="smallContainer flexSpBt">
                 <h2>
                     Porta Dropbox Business 
                     <br>
@@ -398,7 +400,7 @@
             <div class="smallContainer bigText">
                 <h2>Domande frequenti</h2>
     
-                <div class="faqContainer">
+                <div class="faqContainer flexSpBt flexWrap">
                     <p class="question">
                         Qual è la differenza tra Dropbox Business Standard e Dropbox Business Advanced?
                     </p>
@@ -411,7 +413,7 @@
                     </p>
                 </div>
     
-                <div class="faqContainer">
+                <div class="faqContainer flexSpBt flexWrap">
                     <p class="question">
                         Qual è la differenza tra Dropbox Business Standard e Dropbox Business Advanced?
                     </p>
@@ -424,7 +426,7 @@
                     </p>
                 </div>
     
-                <div class="faqContainer">
+                <div class="faqContainer flexSpBt flexWrap">
                     <p class="question">
                         Qual è la differenza tra Dropbox Business Standard e Dropbox Business Advanced?
                     </p>
@@ -443,7 +445,7 @@
 
     <footer>
         <div class="largeContainer">
-            <div id="linkListsContainer">
+            <div id="linkListsContainer" class="flexSpBt">
                 
                 <div class="linkList">
                     <h3>Dropbox</h3>
@@ -554,66 +556,5 @@
             <span id="langSelector" class="bigText">Italiano</span>
         </div>
     </footer>
-
-    <!-- header -->
-            <!-- nav -->
-            <!-- leftNav -->
-                <!-- logo -->
-                <!-- ul -->
-            <!-- rightNav -->
-                <!-- ul -->
-
-    <!-- jumbotron section-->
-        <!-- large container -->
-            <!-- h1 -->
-            <!-- container -->
-                <!-- textContainer -->
-                    <!-- paragraph -->
-                    <!-- button -->
-                    <!-- arrow -->
-                <!-- img container -->
-
-    <!-- main -->
-        <!-- small Container -->
-            <!-- section -->
-                <!-- h2 -->
-                <!-- radio input -->
-                <!-- 3 small columns -->
-                <!--large column -->
-            <!-- section -->
-                <!-- img container -->
-                <!-- text container -->
-            <!-- section -->
-                <!-- h2 -->
-                <!-- cards x6 -->
-            <!-- section -->
-                <!-- h2 -->
-        
-    <!-- section -->
-        <!-- group1 -->
-            <!-- 4 small squares -->
-        <!-- big square -->
-         <!-- group2 -->
-            <!-- 4 small squares -->
-
-    <!-- section -->
-        <!-- small container -->
-            <!-- h2 -->
-            <!-- button -->
-
-    <!-- section faqs -->
-        <!-- small container -->
-            <!-- h2 -->
-            <!-- question container x4-->
-                <!-- p -->
-                <!-- arrow container -->
-
-    <!-- footer -->
-        <!-- top section -->
-            <!-- container x5 -->
-                <!-- h3 -->
-                <!-- ul -->
-        <!-- bottom section -->
-            <!-- paragraph -->
 </body>
 </html>
